@@ -1,0 +1,31 @@
+<h1> History </h1>
+<h2>Programs</h2>
+
+  {{#each programs}}
+  <h4> {{name}}</h5>
+  <p>
+    <i>{{description}}</i>
+  </p>
+  <ul>
+    {{#each exercises}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  {{/each}}
+
+<h2> Entries </h2>
+    {{#each entries}}
+    <p>
+      <b>{{date}}</b>
+      <ul>
+        {{#each exercises}}
+          <p> {{exo_ref}}</p>
+          <ul>
+            {{#each reps}}
+              <li>Serie of {{hits}} with a variable of : {{val}}</li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </ul>
+    </p>
+    {{/each}}
